@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "boxen": "^7.1.1"
+    "boxen": "^7.1.1",
+    "nanoid": "^5.0.1"
   },
   "name": "donuts-app",
   "version": "1.0.0",
