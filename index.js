@@ -32,7 +32,7 @@ function run() {
             inform(action, id);
             break;
         case 'update':
-            updatedDonuts = edit(action, id, name);
+            updatedDonuts = edit(donuts, id, name);
             writeToFile = true;
             break;
         case 'destroy':
