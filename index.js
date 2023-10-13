@@ -8,7 +8,7 @@ function run() {
     const updatedDonuts = [];
     const action = process.argv[2];
     const id = process.argv[3];
-    const name = process.argv[4];
+    let name = process.argv[4];
 
     if (action.toLowerCase() == 'create') {
         name = id;
