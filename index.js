@@ -36,7 +36,8 @@ function run() {
             writeToFile = true;
             break;
         case 'destroy':
-            inform(action, id);
+            updatedDonuts = destroy(donuts, id);
+            writeToFile = true;
             break;
     }
 
