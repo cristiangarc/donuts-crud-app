@@ -5,7 +5,7 @@ const inform = console.log;
 
 function run() {
     let writeToFile = false;
-    const updatedDonuts = [];
+    let updatedDonuts = [];
     const action = process.argv[2];
     const id = process.argv[3];
     let name = process.argv[4];
@@ -25,7 +25,7 @@ function run() {
             inform(donutsView);
             break;
         case 'create':
-            create(donuts, name);
+            updatedDonuts = create(donuts, name);
             writeToFile = true;
             break;
         case 'show':
