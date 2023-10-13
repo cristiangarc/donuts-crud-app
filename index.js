@@ -1,4 +1,6 @@
 function run() {
+    const writeToFile = false;
+    const updatedDonuts = [];
     const action = process.argv[2];
     const id = process.argv[3];
     const name = process.argv[4];
@@ -24,6 +26,10 @@ function run() {
         case 'destroy':
             inform(action, id);
             break;
+    }
+
+    if (writeToFile) {
+        writeJSONFile('./data', 'donuts.json', updatedDonuts);
     }
 }
 
