@@ -33,5 +33,7 @@ const edit = (donuts, id, name) => {
 }
 
 module.exports = {
-    create, index, edit
+    create,
+    index,
+    edit
 }
