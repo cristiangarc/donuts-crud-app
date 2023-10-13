@@ -1,5 +1,5 @@
 const { readJSONFile, writeJSONFile } = require('./src/helpers.js');
-const { index, create } = require('./src/donutsController.js');
+const { index, create, edit } = require('./src/donutsController.js');
 const donuts = readJSONFile('./data', 'donuts.json');
 const inform = console.log;
 
