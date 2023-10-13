@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "boxen": "^7.1.1"
+  },
+  "name": "donuts-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "index": "node index.js index",
+    "create": "node index.js create",
+    "show": "node index.js show",
+    "update": "node index.js update",
+    "destroy": "node index.js destroy",
+    "score": "node index.js score",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
