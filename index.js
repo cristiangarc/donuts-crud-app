@@ -9,6 +9,10 @@ function run() {
         name = id;
     }
 
+    if (!id) {  
+        inform('Please input an id');
+    }
+
     switch (action) {
         case 'index':
             // Show all of the donuts, in stock or otherwise
