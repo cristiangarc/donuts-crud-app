@@ -3,7 +3,7 @@
     "boxen": "^7.1.1",
     "nanoid": "^5.0.1"
   },
-  "name": "donuts-app",
+  "name": "donuts-inventory-app",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -16,9 +16,9 @@
     "test": "jest"
   },
   "keywords": [],
-  "author": "",
+  "author": "Cristian Garcia-Calleja",
   "license": "ISC",
-  "description": "",
+  "description": "An inventory app that keeps track of donut names and prices at a shop. Can create a donut by name, edit a donut name using an id, delete a donut with an id, and show all of the donuts that are both in stock and out.",
   "devDependencies": {
     "jest": "^29.7.0"
   }
