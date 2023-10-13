@@ -1,5 +1,6 @@
 const { nanoid } = require("nanoid");
 const donutPrices = require('../data/donutPrices.json');
+const inform = console.log;
 
 const create = (donuts, name = '') => {
     const newDonut = {
@@ -12,6 +13,10 @@ const create = (donuts, name = '') => {
     return donuts;
 }
 
+const index = (donuts) => {
+    return donuts.map((donut) => donut.id + ' ' + donut.name + ' ' + donut.priceInCents);
+}
+
 module.exports = {
-    create,
+    create, index
 }
