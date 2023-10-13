@@ -4,7 +4,7 @@ const donuts = readJSONFile('./data', 'donuts.json');
 const inform = console.log;
 
 function run() {
-    const writeToFile = false;
+    let writeToFile = false;
     const updatedDonuts = [];
     const action = process.argv[2];
     const id = process.argv[3];
@@ -26,6 +26,7 @@ function run() {
             break;
         case 'create':
             create(donuts, name);
+            writeToFile = true;
             break;
         case 'show':
             inform(action, id);
