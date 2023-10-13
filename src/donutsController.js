@@ -11,3 +11,7 @@ const create = (donuts, name = '') => {
     donuts.push(newDonut);
     return donuts;
 }
+
+module.exports = {
+    create,
+}
