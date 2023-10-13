@@ -1,10 +1,11 @@
 const { nanoid } = require("nanoid");
+const donutPrices = require('../data/donutPrices.json');
 
 const create = (name) => {
     return {
         name: name,
-        priceInCents: 100,
+        priceInCents: donutPrices[name] || 100,
         id: nanoid(4),
-        flavor: 'sweet'
+        inStock: true
     }
 }
