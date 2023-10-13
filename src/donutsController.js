@@ -32,8 +32,21 @@ const edit = (donuts, id, name) => {
     }
 }
 
+const destroy = (donuts, id) => {
+    const index = donuts.findIndex((dn) => dn.id == id);
+    if (index > -1) {
+        donuts.splice(index, 1);
+        inform('Donut successfully deleted');
+        return donuts;
+    } else {
+        inform('Donut not found. No action taken');
+        return donuts;
+    }
+}
+
 module.exports = {
     create,
     index,
-    edit
+    edit,
+    destroy
 }
