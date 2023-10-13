@@ -33,6 +33,7 @@ function run() {
             break;
         case 'update':
             updatedDonuts = edit(action, id, name);
+            writeToFile = true;
             break;
         case 'destroy':
             inform(action, id);
