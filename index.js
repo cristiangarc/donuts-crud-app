@@ -1,5 +1,11 @@
 function run() {
     const action = process.argv[2];
+    const id = process.argv[3];
+    const name = process.argv[4];
+
+    if (action.toLowerCase() == 'create') {
+        name = id;
+    }
 
     switch (action) {
         case 'index':
