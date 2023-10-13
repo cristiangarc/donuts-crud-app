@@ -1,6 +1,8 @@
 const { readJSONFile, writeJSONFile } = require('./src/helpers');
 const donuts = readJSONFile('./data', 'donuts.json');
 
+const inform = console.log;
+
 function run() {
     const writeToFile = false;
     const updatedDonuts = [];
