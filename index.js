@@ -1,6 +1,6 @@
 const { readJSONFile, writeJSONFile } = require('./src/helpers');
+const { index, create } = require('./src/donutsController');
 const donuts = readJSONFile('./data', 'donuts.json');
-
 const inform = console.log;
 
 function run() {
@@ -21,10 +21,11 @@ function run() {
     switch (action) {
         case 'index':
             // Show all of the donuts, in stock or otherwise
-            inform(action);
+            const donutsView = index(donuts);
+            inform(donutsView);
             break;
         case 'create':
-            inform(action);
+            create(name);
             break;
         case 'show':
             inform(action, id);
