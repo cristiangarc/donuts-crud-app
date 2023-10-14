@@ -44,6 +44,15 @@ const destroy = (donuts, id) => {
     }
 }
 
+const show = (donuts, id) => {
+    const donut = donuts.find((dn) => dn.id == id);
+    if (!donut) {
+        return 'No donut with that ID';
+    } else {
+        inform(donut.id + ' ' + donut.name + ' ' + donut.priceInCents + ' in stock: ' + donut.inStock);
+    }
+}
+
 module.exports = {
     create,
     index,
