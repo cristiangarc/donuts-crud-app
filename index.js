@@ -34,11 +34,14 @@ function run() {
             break;
         case 'update':
             updatedDonuts = edit(donuts, id, name);
-            writeToFile = true;
+            if (!updatedDonuts) {
+                inform('There was an error when updating the items. Please input a valid ID and name.')
+            } else {
+                writeToFile = true;
+            }
             break;
         case 'destroy':
             updatedDonuts = destroy(donuts, id);
-            writeToFile = true;
             break;
     }
 
