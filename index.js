@@ -29,7 +29,8 @@ function run() {
             writeToFile = true;
             break;
         case 'show':
-            inform(action, id);
+            const showView = show();
+            inform(showView);
             break;
         case 'update':
             updatedDonuts = edit(donuts, id, name);
