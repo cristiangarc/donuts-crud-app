@@ -49,7 +49,7 @@ const show = (donuts, id) => {
     if (!donut) {
         return 'No donut with that ID';
     } else {
-        inform(donut.id + ' ' + donut.name + ' ' + donut.priceInCents + ' in stock: ' + donut.inStock);
+        return donut.id + ' ' + donut.name + ' ' + donut.priceInCents + ' in stock: ' + donut.inStock;
     }
 }
 
@@ -57,5 +57,6 @@ module.exports = {
     create,
     index,
     edit,
-    destroy
+    destroy,
+    show
 }
