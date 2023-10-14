@@ -42,6 +42,11 @@ function run() {
             break;
         case 'destroy':
             updatedDonuts = destroy(donuts, id);
+            if (!updatedDonuts) {
+                inform('There was an error when deleting the item. Please input a valid ID.')
+            } else {
+                writeToFile = true;
+            }
             break;
     }
 
