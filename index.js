@@ -1,5 +1,5 @@
 const { readJSONFile, writeJSONFile } = require('./src/helpers.js');
-const { index, create, edit, destroy } = require('./src/donutsController.js');
+const { index, create, edit, destroy, show } = require('./src/donutsController.js');
 const donuts = readJSONFile('./data', 'donuts.json');
 const inform = console.log;
 
@@ -29,7 +29,7 @@ function run() {
             writeToFile = true;
             break;
         case 'show':
-            const showView = show();
+            const showView = show(donuts, id);
             inform(showView);
             break;
         case 'update':
