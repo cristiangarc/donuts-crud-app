@@ -22,7 +22,7 @@ const edit = (donuts, id, name) => {
     if (index > -1) {
         const donut = donuts[index];
         donut.name = name;
-        donut.priceInCents = donutPrices[name];
+        donut.priceInCents = donutPrices[name] || 100;
         donut.inStock = true;
         inform('Donut successfully updated');
         return donuts;
@@ -53,10 +53,16 @@ const show = (donuts, id) => {
     }
 }
 
+const cancelCart = (crt) => {
+    crt = [];
+    return crt;
+}
+
 module.exports = {
     create,
     index,
     edit,
     destroy,
-    show
+    show,
+    cancelCart
 }
