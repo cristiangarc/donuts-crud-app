@@ -68,6 +68,10 @@ function run() {
             }
             writeToCart = true;
             break;
+        case 'all':
+            const allView = all(cart);
+            inform(allView);
+            break;
     }
 
     if (writeToFile) {
