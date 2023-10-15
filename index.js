@@ -1,10 +1,9 @@
 const { readJSONFile, writeJSONFile } = require('./src/helpers.js');
-const { index, create, edit, destroy, show, cancelCart} = require('./src/donutsController.js');
+const { index, create, edit, destroy, show, addToCart, all } = require('./src/donutsController.js');
 const donuts = readJSONFile('./data', 'donuts.json');
+let cart = readJSONFile('./data', 'cart.json');
 const inform = console.log;
 
-// shopping cart
-let cart = ['vanilla'];
 
 function run() {
     let writeToFile = false;
@@ -51,9 +50,6 @@ function run() {
                 writeToFile = true;
             }
             break;
-        case 'cancel':
-            cart = cancelCart(cart);
-            break;
     }
 
     if (writeToFile) {
@@ -62,4 +58,4 @@ function run() {
 }
 
 run();
-console.log(cart);
+// console.log(cart);
