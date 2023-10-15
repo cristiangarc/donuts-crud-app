@@ -58,11 +58,16 @@ const addToCart = (crt, name) => {
     return crt;
 }
 
+const all = (cart) => {
+    return cart.map((item) => item);
+}
+
 module.exports = {
     create,
     index,
     edit,
     destroy,
     show,
-    addToCart
+    addToCart,
+    all
 }
