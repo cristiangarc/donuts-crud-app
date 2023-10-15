@@ -10,6 +10,8 @@ function run() {
     let updatedDonuts = [];
 
     let writeToCart = false;
+    // shopping cart
+    let updatedCart = [];
 
     const action = process.argv[2];
     const id = process.argv[3];
@@ -52,6 +54,10 @@ function run() {
             } else {
                 writeToFile = true;
             }
+            break;
+        case 'cancel':
+            updatedCart = [];
+            writeToCart = true;
             break;
     }
 
