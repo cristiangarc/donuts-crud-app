@@ -8,6 +8,9 @@ const inform = console.log;
 function run() {
     let writeToFile = false;
     let updatedDonuts = [];
+
+    let writeToCart = false;
+
     const action = process.argv[2];
     const id = process.argv[3];
     let name = process.argv[4];
@@ -54,6 +57,9 @@ function run() {
 
     if (writeToFile) {
         writeJSONFile('./data', 'donuts.json', updatedDonuts);
+    }
+    if (writeToCart) {
+        writeJSONFile('./data', 'cart.json', updatedCart);
     }
 }
 
