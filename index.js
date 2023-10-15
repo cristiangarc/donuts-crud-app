@@ -59,6 +59,10 @@ function run() {
             updatedCart = [];
             writeToCart = true;
             break;
+        case 'cart':
+            updatedCart = addToCart(cart, name);
+            writeToCart = true;
+            break;
     }
 
     if (writeToFile) {
