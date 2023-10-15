@@ -53,8 +53,8 @@ const show = (donuts, id) => {
     }
 }
 
-const cancelCart = (crt) => {
-    crt = [];
+const addToCart = (crt, name) => {
+    crt.push(name);
     return crt;
 }
 
@@ -64,5 +64,5 @@ module.exports = {
     edit,
     destroy,
     show,
-    cancelCart
+    addToCart
 }
