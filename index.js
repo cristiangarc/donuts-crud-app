@@ -61,6 +61,11 @@ function run() {
             break;
         case 'cart':
             updatedCart = addToCart(cart, name);
+            if (!updatedCart) {
+                inform('There was an error when updating the cart');
+            } else {
+                inform('Item successfully added to cart');
+            }
             writeToCart = true;
             break;
     }
