@@ -58,8 +58,12 @@ const addToCart = (crt, name) => {
     return crt;
 }
 
-const all = (cart) => {
-    return cart.map((item) => item);
+const all = (crt) => {
+    return crt.map((item) => item);
+}
+
+const price = (donuts, crt) => {
+    return crt.reduce((acc, curr) => acc + donutPrices[curr], 0);
 }
 
 module.exports = {
@@ -69,5 +73,6 @@ module.exports = {
     destroy,
     show,
     addToCart,
-    all
+    all,
+    price
 }
