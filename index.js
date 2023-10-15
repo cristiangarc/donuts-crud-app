@@ -12,7 +12,7 @@ function run() {
     const id = process.argv[3];
     let name = process.argv[4];
 
-    if (action.toLowerCase() == 'create') {
+    if (action.toLowerCase() == 'create' || action.toLowerCase() == 'cart') {
         name = id;
     }
 
