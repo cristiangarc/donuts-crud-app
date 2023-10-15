@@ -1,5 +1,5 @@
 const { readJSONFile, writeJSONFile } = require('./src/helpers.js');
-const { index, create, edit, destroy, show, addToCart, all } = require('./src/donutsController.js');
+const { index, create, edit, destroy, show, addToCart, all, price } = require('./src/donutsController.js');
 const donuts = readJSONFile('./data', 'donuts.json');
 let cart = readJSONFile('./data', 'cart.json');
 const inform = console.log;
@@ -72,6 +72,10 @@ function run() {
             const allView = all(cart);
             inform(allView);
             break;
+        case 'price':
+            const pr = price(cart);
+            inform('price of cart: $' + (pr / 100).toFixed(2));
+            break;
     }
 
     if (writeToFile) {
@@ -83,4 +87,3 @@ function run() {
 }
 
 run();
-// console.log(cart);
