@@ -1,5 +1,6 @@
 const { nanoid } = require("nanoid");
 const donutPrices = require('../data/donutPrices.json');
+const veganDonuts = require('../data/veganDonuts.json');
 const inform = console.log;
 
 const create = (donuts, name = '') => {
@@ -7,18 +8,24 @@ const create = (donuts, name = '') => {
     if (currentDonuts.includes(name)) {
         return null;
     }
+
+    let bool = veganDonuts.includes(name);
+
     const newDonut = {
         name: name,
         priceInCents: donutPrices[name] || 100,
         id: nanoid(4),
-        inStock: true
+        inStock: true,
+        isVegan: bool
     }
     donuts.push(newDonut);
     return donuts;
 }
 
 const index = (donuts) => {
-    return donuts.map((donut) => donut.id + ' ' + donut.name + ' ' + donut.priceInCents + ' ' + donut.inStock);
+    return donuts.map((donut) => donut.id + ' ' + donut.name +
+    ' ' + donut.priceInCents + ' in stock: ' + donut.inStock +
+    ', is vegan: ' + donut.isVegan);
 }
 
 const edit = (donuts, id, name) => {
