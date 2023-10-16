@@ -29,6 +29,10 @@ function run() {
             break;
         case 'create':
             updatedDonuts = create(donuts, name);
+            if (!updatedDonuts) {
+                inform('Donut already exists');
+                break;
+            }
             writeToFile = true;
             break;
         case 'show':
