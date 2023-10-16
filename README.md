@@ -1,11 +1,11 @@
 # donuts-crud-app
-Setup
+## Setup
 Fork and clone this repository. Download the necessary dependencies with npm install.
 
-Guide
+## Guide
 This CRUD app has a number of commands, including reading and updating a json file, creating and deleting data in a json file, and informing the user of successful and unsuccessful actions or commands.
 
-Commands
+### Commands
 Create your own donut with the command:
     npm run create donut_name
 
@@ -21,7 +21,7 @@ Update the name of a donut using its ID with:
 Destroy a particular donut using its ID:
     npm run destroy id
 
-Cart Functionality
+### Cart Functionality
 
 Add a specific donut to your cart with:
     npm run cart donut_name
