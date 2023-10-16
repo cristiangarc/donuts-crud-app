@@ -7,19 +7,29 @@ This CRUD app has a number of commands, including reading and updating a json fi
 
 ### Commands
 Create your own donut with the command:
-    npm run create donut_name
+```
+npm run create donut_name
+```
 
 View all of your current donuts with:
-    npm run index
+```
+npm run index
+```
 
 View a specific donut using its ID:
-    npm run show id
+```
+npm run show id
+```
 
 Update the name of a donut using its ID with:
-    npm run update id
+```
+npm run update id
+```
 
 Destroy a particular donut using its ID:
-    npm run destroy id
+```
+npm run destroy id
+```
 
 ### Cart Functionality
 
