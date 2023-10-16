@@ -3,6 +3,10 @@ const donutPrices = require('../data/donutPrices.json');
 const inform = console.log;
 
 const create = (donuts, name = '') => {
+    const currentDonuts = donuts.map((dn) => dn.name);
+    if (currentDonuts.includes(name)) {
+        return null;
+    }
     const newDonut = {
         name: name,
         priceInCents: donutPrices[name] || 100,
