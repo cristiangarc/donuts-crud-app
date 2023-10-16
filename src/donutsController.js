@@ -62,8 +62,20 @@ const all = (crt) => {
     return crt.map((item) => item);
 }
 
-const price = (donuts, crt) => {
+const price = (crt) => {
     return crt.reduce((acc, curr) => acc + donutPrices[curr], 0);
+}
+
+const items = (crt) => {
+    const out = {};
+    crt.forEach((dn) => {
+        if (out[dn]) {
+            out[dn] += 1;
+        } else {
+            out[dn] = 1;
+        }
+    });
+    return out;
 }
 
 module.exports = {
@@ -74,5 +86,6 @@ module.exports = {
     show,
     addToCart,
     all,
-    price
+    price,
+    items
 }
