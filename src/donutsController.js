@@ -92,6 +92,11 @@ const getVeganDonuts = (donuts) => {
     return donuts.filter((dn) => dn.isVegan).map((dn) => dn.name);
 }
 
+const below = (donuts, pr = 0) => {
+    const filteredDonuts = donuts.filter((dn) => dn.priceInCents <= pr);
+    return filteredDonuts.map((dn) => dn.name);
+}
+
 module.exports = {
     create,
     index,
@@ -102,5 +107,6 @@ module.exports = {
     all,
     price,
     items,
-    getVeganDonuts
+    getVeganDonuts,
+    below
 }
