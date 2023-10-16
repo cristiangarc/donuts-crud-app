@@ -3,7 +3,7 @@
 Fork and clone this repository. Download the necessary dependencies with
 ```
 npm install
-```.
+```
 
 ## Guide
 This CRUD app has a number of commands, including reading and updating a json file, creating and deleting data in a json file, and informing the user of successful and unsuccessful actions or commands.
