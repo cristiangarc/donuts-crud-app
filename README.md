@@ -34,16 +34,26 @@ npm run destroy id
 ### Cart Functionality
 
 Add a specific donut to your cart with:
-    npm run cart donut_name
+```
+npm run cart donut_name
+```
 
 Check all of the donuts in your cart:
-    npm run all
+```
+npm run all
+```
 
 Check the total price of the cart:
-    npm run price
+```
+npm run price
+```
 
 See the total number of each donut in your cart with:
-    npm run items
+```
+npm run items
+```
 
 Cancel your cart with:
-    npm run cancel
+```
+npm run cancel
+```
