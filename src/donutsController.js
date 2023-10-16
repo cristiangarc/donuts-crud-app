@@ -5,7 +5,7 @@ const inform = console.log;
 
 const create = (donuts, name = '') => {
     const currentDonuts = donuts.map((dn) => dn.name);
-    if (currentDonuts.includes(name)) {
+    if (currentDonuts.includes(name) || !name) {
         return null;
     }
 
@@ -89,6 +89,10 @@ const items = (crt) => {
     return out;
 }
 
+const getVeganDonuts = (donuts) => {
+    return donuts.filter((dn) => dn.isVegan).map((dn) => dn.name);
+}
+
 module.exports = {
     create,
     index,
@@ -98,5 +102,6 @@ module.exports = {
     addToCart,
     all,
     price,
-    items
+    items,
+    getVeganDonuts
 }
