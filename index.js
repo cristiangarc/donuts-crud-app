@@ -1,5 +1,5 @@
 const { readJSONFile, writeJSONFile } = require('./src/helpers.js');
-const { index, create, edit, destroy, show, addToCart, all, price, items } = require('./src/donutsController.js');
+const { index, create, edit, destroy, show, addToCart, all, price, items, getVeganDonuts } = require('./src/donutsController.js');
 const donuts = readJSONFile('./data', 'donuts.json');
 let cart = readJSONFile('./data', 'cart.json');
 const inform = console.log;
@@ -80,6 +80,10 @@ function run() {
         case 'items':
             const itms = items(cart);
             inform('items in cart:\n', itms);
+            break;
+        case 'vegan':
+            const veganDnts = getVeganDonuts(donuts);
+            inform(veganDnts);
             break;
     }
 
