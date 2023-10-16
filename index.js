@@ -16,9 +16,16 @@ function run() {
     const action = process.argv[2];
     const id = process.argv[3];
     let name = process.argv[4];
-
+    let belowPrice = 0;
+    
     if (action.toLowerCase() == 'create' || action.toLowerCase() == 'cart') {
         name = id;
+    }
+    
+    if (action.toLowerCase() == 'price' && id) {
+        belowPrice = Number(id).toFixed(2);
+    } else if (action.toLowerCase() == 'price' && !id) {
+        inform('Please enter an ID');
     }
 
     switch (action) {
