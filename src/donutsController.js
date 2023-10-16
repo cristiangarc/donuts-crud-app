@@ -24,8 +24,7 @@ const create = (donuts, name = '') => {
 
 const index = (donuts) => {
     return donuts.map((donut) => donut.id + ' ' + donut.name +
-    ' ' + donut.priceInCents + ' in stock: ' + donut.inStock +
-    ', is vegan: ' + donut.isVegan);
+    ' ' + donut.priceInCents + ' in stock: ' + donut.inStock);
 }
 
 const edit = (donuts, id, name) => {
@@ -60,7 +59,7 @@ const show = (donuts, id) => {
     if (!donut) {
         return 'No donut with that ID';
     } else {
-        return donut.id + ' ' + donut.name + ' ' + donut.priceInCents + ' in stock: ' + donut.inStock;
+        return donut.id + ' ' + donut.name + ' ' + donut.priceInCents + ' is vegan: ' + donut.isVegan;
     }
 }
 
