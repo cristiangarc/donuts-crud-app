@@ -3,20 +3,18 @@ const donutPrices = require('../data/donutPrices.json');
 const veganDonuts = require('../data/veganDonuts.json');
 const inform = console.log;
 
-const create = (donuts, name = '') => {
+const create = (donuts, name) => {
     const currentDonuts = donuts.map((dn) => dn.name);
-    if (currentDonuts.includes(name) || !name) {
+    if (currentDonuts.includes(name)) {
         return null;
     }
-
-    let bool = veganDonuts.includes(name);
 
     const newDonut = {
         name: name,
         priceInCents: donutPrices[name] || 100,
         id: nanoid(4),
         inStock: true,
-        isVegan: bool
+        isVegan: veganDonuts.includes(name)
     }
     donuts.push(newDonut);
     return donuts;
@@ -27,13 +25,14 @@ const index = (donuts) => {
     ' ' + donut.priceInCents + ' in stock: ' + donut.inStock);
 }
 
-const edit = (donuts, id, name = '') => {
+const edit = (donuts, id, name) => {
     const index = donuts.findIndex((dn) => dn.id == id);
     if (index > -1) {
         const donut = donuts[index];
         donut.name = name;
         donut.priceInCents = donutPrices[name] || 100;
         donut.inStock = true;
+        donut.isVegan = veganDonuts.includes(name);
         inform('Donut successfully updated');
         return donuts;
     } else {
