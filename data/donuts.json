@@ -1,19 +1,19 @@
 [{
-    "id": "01HCJMWASHC0NE0MST1H23BQNT",
     "name": "rutrum",
     "priceInCents": 38,
-    "flavor": "dictumst",
+    "id": "01HCJMWASHC0NE0MST1H23BQNT",
+    "inStock": true,
     "isVegan": true
 }, {
-    "id": "01HCJMWASKG7WKT2BN4H7H7Y9K",
     "name": "nisi",
     "priceInCents": 70,
-    "flavor": "in",
+    "id": "01HCJMWASKG7WKT2BN4H7H7Y9K",
+    "inStock": true,
     "isVegan": false
 }, {
-    "id": "01HCJMWASKW9SAZTK80DP06V23",
     "name": "nulla",
     "priceInCents": 96,
-    "flavor": "mus",
+    "id": "01HCJMWASKW9SAZTK80DP06V23",
+    "inStock": true,
     "isVegan": true
 }]
