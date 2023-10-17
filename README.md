@@ -5,6 +5,8 @@ Fork and clone this repository. Open up your terminal and use `git clone` to clo
 npm install
 ```
 
+![image of an orange donut with the word donut](img/donut-crud-logo.png)
+
 ## Guide
 This CRUD app is an online donut shop. There are a number of commands, including reading from a donuts.json file, which contains the donuts for sale, creating donuts that are in stock, deleting donuts that are no longer available, and informing the user of successful or unsuccessful commands or actions.
 
