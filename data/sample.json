@@ -1,0 +1,19 @@
+[{
+    "name": "rutrum",
+    "priceInCents": 38,
+    "id": "01HCJMWASHC0NE0MST1H23BQNT",
+    "inStock": true,
+    "isVegan": true
+}, {
+    "name": "nisi",
+    "priceInCents": 70,
+    "id": "01HCJMWASKG7WKT2BN4H7H7Y9K",
+    "inStock": true,
+    "isVegan": false
+}, {
+    "name": "nulla",
+    "priceInCents": 96,
+    "id": "01HCJMWASKW9SAZTK80DP06V23",
+    "inStock": true,
+    "isVegan": true
+}]
