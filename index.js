@@ -18,6 +18,10 @@ function run() {
     let belowPrice = 0;
     
     if (action.toLowerCase() == 'create' || action.toLowerCase() == 'cart') {
+        if (!name) {
+            inform('Please enter a name');
+            return null;
+        }
         name = id;
     }
     
@@ -45,6 +49,7 @@ function run() {
                 inform('Donut already exists');
                 break;
             }
+            inform('Donut successfully created');
             writeToFile = true;
             break;
         case 'show':
