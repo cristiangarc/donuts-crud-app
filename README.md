@@ -13,7 +13,7 @@ Create your own for-sale donut:
 ```
 npm run create donut_name
 ```
-
+![screenshot of the output of npm run create donut_name](<img/npm run create.png>)
 View all of your available donuts:
 ```
 npm run index
