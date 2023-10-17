@@ -1,12 +1,12 @@
 # donuts-crud-app
 ## Setup
-Fork and clone this repository. Download the necessary dependencies with
+Fork and clone this repository. Open up your terminal and use `git clone` to clone the repo. Navigate to your clones repo and download the necessary Node.js dependencies with:
 ```
 npm install
 ```
 
 ## Guide
-This CRUD app has a number of commands, including reading and updating a json file, creating and deleting data in a json file, and informing the user of successful and unsuccessful actions or commands.
+This CRUD app is an online donut shop. There are a number of commands, including reading from a donuts.json file, which contains the donuts for sale, creating donuts that are in stock, deleting donuts, from donuts.json, that are no longer available, and informing the user of successful and unsuccessful commands or actions.
 
 ### Commands
 Create your own donut with the command:
@@ -24,7 +24,7 @@ View a specific donut using its ID:
 npm run show id
 ```
 
-Update the name of a donut using its ID with:
+Update the name of a donut using its ID:
 ```
 npm run update id
 ```
