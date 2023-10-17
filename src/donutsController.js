@@ -21,8 +21,8 @@ const create = (donuts, name) => {
 }
 
 const index = (donuts) => {
-    return donuts.map((donut) => donut.id + ' ' + donut.name +
-    ' ' + donut.priceInCents + ' in stock: ' + donut.inStock);
+    return donuts.map((donut) => donut.id + ', ' + donut.name +
+    ', price: ' + donut.priceInCents + ', in stock: ' + donut.inStock);
 }
 
 const edit = (donuts, id, name) => {
