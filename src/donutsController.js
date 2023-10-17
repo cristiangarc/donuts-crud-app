@@ -68,15 +68,15 @@ const addToCart = (crt, name) => {
     return crt;
 }
 
-const all = (crt) => {
+const getAll = (crt) => {
     return crt.map((item) => item);
 }
 
-const price = (crt) => {
+const getPrice = (crt) => {
     return crt.reduce((acc, curr) => acc + donutPrices[curr], 0);
 }
 
-const items = (crt) => {
+const getItems = (crt) => {
     const out = {};
     crt.forEach((dn) => {
         if (out[dn]) {
@@ -92,8 +92,8 @@ const getVeganDonuts = (donuts) => {
     return donuts.filter((dn) => dn.isVegan).map((dn) => dn.name);
 }
 
-const below = (donuts, pr = 0) => {
-    const filteredDonuts = donuts.filter((dn) => dn.priceInCents <= pr);
+const below = (donuts, prce = 0) => {
+    const filteredDonuts = donuts.filter((dn) => dn.priceInCents <= prce);
     return filteredDonuts.map((dn) => dn.name);
 }
 
@@ -104,9 +104,9 @@ module.exports = {
     destroy,
     show,
     addToCart,
-    all,
-    price,
-    items,
+    getAll,
+    getPrice,
+    getItems,
     getVeganDonuts,
     below
 }
