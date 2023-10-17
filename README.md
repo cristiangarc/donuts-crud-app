@@ -9,12 +9,12 @@ npm install
 This CRUD app is an online donut shop. There are a number of commands, including reading from a donuts.json file, which contains the donuts for sale, creating donuts that are in stock, deleting donuts, from donuts.json, that are no longer available, and informing the user of successful and unsuccessful commands or actions.
 
 ### Commands
-Create your own donut with the command:
+Create your own for-sale donut:
 ```
 npm run create donut_name
 ```
 
-View all of your current donuts with:
+View all of your available donuts:
 ```
 npm run index
 ```
@@ -24,9 +24,9 @@ View a specific donut using its ID:
 npm run show id
 ```
 
-Update the name of a donut using its ID:
+Update the name of a donut using its ID and the new name:
 ```
-npm run update id
+npm run update id donut_name
 ```
 
 Destroy a particular donut using its ID:
@@ -41,22 +41,22 @@ Add a specific donut to your cart with:
 npm run cart donut_name
 ```
 
-Check all of the donuts in your cart:
+See all of the donuts in your cart:
 ```
 npm run all
 ```
 
-Check the total price of the cart:
+Check the total price of your cart:
 ```
 npm run price
 ```
 
-See the total number of each donut in your cart with:
+View the number of each donut in your cart:
 ```
 npm run items
 ```
 
-Cancel your cart with:
+Empty your cart with:
 ```
 npm run cancel
 ```
