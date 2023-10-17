@@ -6,7 +6,7 @@ npm install
 ```
 
 ## Guide
-This CRUD app is an online donut shop. There are a number of commands, including reading from a donuts.json file, which contains the donuts for sale, creating donuts that are in stock, deleting donuts, from donuts.json, that are no longer available, and informing the user of successful and unsuccessful commands or actions.
+This CRUD app is an online donut shop. There are a number of commands, including reading from a donuts.json file, which contains the donuts for sale, creating donuts that are in stock, deleting donuts that are no longer available, and informing the user of successful or unsuccessful commands or actions.
 
 ### Commands
 Create your own for-sale donut:
@@ -18,6 +18,7 @@ View all of your available donuts:
 ```
 npm run index
 ```
+![four lines of output, with details of a donut on each line](img/"npm run index".png)
 
 View a specific donut using its ID:
 ```
