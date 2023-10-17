@@ -63,3 +63,14 @@ Empty your cart with:
 ```
 npm run cancel
 ```
+
+### Additional Functionality
+Get all of the available vegan donuts with:
+```
+npm run vegan
+```
+
+Get all of the donuts below a certain price with:
+```
+npm run below price_point
+```
