@@ -18,7 +18,7 @@ function run() {
     let belowPrice = 0;
     
     if (action.toLowerCase() == 'create' || action.toLowerCase() == 'cart') {
-        if (!name) {
+        if (!id) {
             inform('Please enter a name');
             return null;
         }
