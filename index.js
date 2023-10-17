@@ -28,6 +28,11 @@ function run() {
         return null;
     }
 
+    if (action.toLowerCase() == 'update' && !name) {
+        inform('Please enter a name')
+        return null;
+    }
+
     switch (action) {
         case 'index':
             // Show all of the donuts, in stock or otherwise
