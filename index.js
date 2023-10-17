@@ -98,7 +98,7 @@ function run() {
             const itms = getItems(cart);
             inform('items in cart:\n', itms);
             break;
-        case 'vegan':
+        case 'vegan': // show all vegan donuts
             const veganDnts = getVeganDonuts(donuts);
             inform(veganDnts);
             break;
