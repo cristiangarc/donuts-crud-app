@@ -27,7 +27,7 @@ const index = (donuts) => {
     ' ' + donut.priceInCents + ' in stock: ' + donut.inStock);
 }
 
-const edit = (donuts, id, name) => {
+const edit = (donuts, id, name = '') => {
     const index = donuts.findIndex((dn) => dn.id == id);
     if (index > -1) {
         const donut = donuts[index];
