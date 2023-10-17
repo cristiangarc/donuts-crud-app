@@ -18,7 +18,7 @@ View all of your available donuts:
 ```
 npm run index
 ```
-![four lines of output, with details of a donut on each line](img/"npm run index".png)
+[screenshot of four lines of shell output, with details of a donut on each line](img/"npm run index".png)
 
 View a specific donut using its ID:
 ```
