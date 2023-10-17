@@ -1,5 +1,5 @@
 const { readJSONFile, writeJSONFile } = require('./src/helpers.js');
-const { index, create, edit, destroy, show, addToCart, all, price, items, getVeganDonuts, below } = require('./src/donutsController.js');
+const { index, create, edit, destroy, show, addToCart, getAll, getPrice, getItems, getVeganDonuts, below } = require('./src/donutsController.js');
 const donuts = readJSONFile('./data', 'donuts.json');
 let cart = readJSONFile('./data', 'cart.json');
 const inform = console.log;
@@ -10,8 +10,7 @@ function run() {
     let updatedDonuts = [];
 
     let writeToCart = false;
-    // shopping cart
-    let updatedCart = [];
+    let updatedCart = []; // shopping cart
 
     const action = process.argv[2];
     const id = process.argv[3];
@@ -24,7 +23,6 @@ function run() {
     
     if (action.toLowerCase() == 'below' && id) {
         belowPrice = Number(id);
-        inform('the price point is: $' + (belowPrice/100).toFixed(2));
     } else if (action.toLowerCase() == 'below' && !id) {
         inform('Please enter an ID');
         return null;
@@ -79,15 +77,15 @@ function run() {
             writeToCart = true;
             break;
         case 'all':
-            const allView = all(cart);
+            const allView = getAll(cart);
             inform(allView);
             break;
         case 'price':
-            const pr = price(cart);
+            const pr = getPrice(cart);
             inform('price of cart: $' + (pr / 100).toFixed(2));
             break;
         case 'items':
-            const itms = items(cart);
+            const itms = getItems(cart);
             inform('items in cart:\n', itms);
             break;
         case 'vegan':
