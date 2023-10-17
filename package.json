@@ -18,7 +18,9 @@
     "cart": "node index.js cart",
     "all": "node index.js all",
     "price": "node index.js price",
-    "items": "node index.js items"
+    "items": "node index.js items",
+    "vegan": "node index.js vegan",
+    "below": "node index.js below"
   },
   "keywords": [],
   "author": "Cristian Garcia-Calleja",
