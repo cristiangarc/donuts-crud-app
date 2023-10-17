@@ -1,19 +1,44 @@
-[{
-    "name": "rutrum",
-    "priceInCents": 38,
-    "id": "01HCJMWASHC0NE0MST1H23BQNT",
-    "inStock": true,
-    "isVegan": true
-}, {
-    "name": "nisi",
-    "priceInCents": 70,
-    "id": "01HCJMWASKG7WKT2BN4H7H7Y9K",
+[
+  {
+    "name": "chocolate",
+    "priceInCents": 100,
+    "id": "RE0n",
     "inStock": true,
     "isVegan": false
-}, {
-    "name": "nulla",
-    "priceInCents": 96,
-    "id": "01HCJMWASKW9SAZTK80DP06V23",
+  },
+  {
+    "name": "vegan pumpkin",
+    "priceInCents": 250,
+    "id": "jcfr",
     "inStock": true,
     "isVegan": true
-}]
+  },
+  {
+    "name": "vegan maple bacon",
+    "priceInCents": 225,
+    "id": "ll5o",
+    "inStock": true,
+    "isVegan": true
+  },
+  {
+    "name": "vanilla",
+    "priceInCents": 150,
+    "id": "THdi",
+    "inStock": true,
+    "isVegan": false
+  },
+  {
+    "name": "powdered",
+    "priceInCents": 100,
+    "id": "zDWJ",
+    "inStock": true,
+    "isVegan": false
+  },
+  {
+    "name": "blueberry",
+    "priceInCents": 100,
+    "id": "l34g",
+    "inStock": true,
+    "isVegan": false
+  }
+]
