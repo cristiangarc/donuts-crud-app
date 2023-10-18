@@ -1,6 +1,6 @@
 # donuts-crud-app
 ## Setup
-Fork and clone this repository. Open up your terminal and use `git clone` to clone the repo. Navigate to your clones repo and download the necessary Node.js dependencies with:
+Fork and clone this repository. Open up your terminal and use `git clone` to clone the repo. Navigate to your cloned repo and download the necessary Node.js dependencies with:
 ```
 npm install
 ```
