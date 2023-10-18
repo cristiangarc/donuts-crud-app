@@ -80,7 +80,7 @@ const getPrice = (crt) => {
 }
 
 const getItems = (crt) => {
-    if (!crt || !crt.length) {
+    if (!crt) {
         return null;
     }
     const out = {};
