@@ -78,7 +78,7 @@ function run() {
             inform('Cart successfully emptied!')
             break;
         case 'cart':
-            updatedCart = addToCart(cart, name);
+            updatedCart = addToCart(donuts, cart, name);
             if (!updatedCart) {
                 inform('There was an error when updating the cart');
             } else {
@@ -94,7 +94,7 @@ function run() {
             const pr = getPrice(cart);
             inform('price of cart: $' + (pr / 100).toFixed(2));
             break;
-        case 'items':
+        case 'items': // get the number of each donut in the cart
             const itms = getItems(cart);
             inform('items in cart:\n', itms);
             break;
