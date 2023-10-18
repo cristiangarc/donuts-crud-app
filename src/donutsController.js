@@ -62,9 +62,13 @@ const show = (donuts, id) => {
     }
 }
 
-const addToCart = (crt, name) => {
-    crt.push(name);
-    return crt;
+const addToCart = (donuts, crt, name) => {
+    const isDonutAvailable = donuts.find((dn) => dn.name == name);
+    if (isDonutAvailable) {
+        crt.push(isDonutAvailable.inStock);
+        return crt;
+    }
+    return null;
 }
 
 const getAll = (crt) => {
@@ -76,6 +80,9 @@ const getPrice = (crt) => {
 }
 
 const getItems = (crt) => {
+    if (!crt || !crt.length) {
+        return null;
+    }
     const out = {};
     crt.forEach((dn) => {
         if (out[dn]) {
