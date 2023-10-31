@@ -6,3 +6,7 @@ for (const i of '0123') {
     const main = document.querySelector('main');
     main.append(article)
 }
+
+// const createDonut = (name, price, inStock, url) => {
+    
+// }
