@@ -26,8 +26,31 @@ main {
 
 article {
     border: 2px solid navy;
-    width: 200px;
-    height: 200px;
-    margin: 50px;
+    width: 100;
+    height: 100;
+    margin: 25px;
     padding: 25px;
+}
+
+main article h3 {
+    text-align: center;
+}
+
+img {
+    padding: 25px;
+    display: block;
+    margin: auto;
+}
+
+@media (max-width: 780) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 500px) {
+    main {
+        grid-template-columns: 1fr;
+    }
 }
