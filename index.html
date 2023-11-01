@@ -14,12 +14,34 @@
     <main>
         <section>
             <article>
-                <h3>Donut 1</h3>
+                <h3>chocolate sprinkles</h3>
                 <img style="width: 150px" src="https://purepng.com/public/uploads/large/purepng.com-donutfood-dessert-donut-doughnut-fat-941524635175i5xtv.png" alt="chocolate, sprinkled donut">
             </article>
         </section>
         <section>
-            <form action="submit"></form>
+            <form id="new-donut">
+                <label for="donut">
+                    Donut
+                    <input id="donut" name="donut" type="text" />
+                </label>
+                <br />
+                <label for="price">
+                    Price
+                    <input id="price" name="price" type="text" />
+                </label>
+                <br />
+                <label for="is-vegan">
+                    Is Vegan?
+                    <select id="is-vegan" name="is-vegan">
+                        <option value="yes">Vegan</option>
+                        <option value="no">Not Vegan</option>
+                        <!-- <option value="american-express">American Express</option>
+                        <option value="discover">Discover</option> -->
+                    </select>
+                </label>
+                <br />
+                <input type="submit" value="Create New Donut"/>
+            </form>
         </section>
     </main>
 </body>
