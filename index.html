@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donuts CRUD</title>
     <link href="styles.css" rel="stylesheet" type="text/css" />
+    <script defer src="createDonut.js"></script>
     <script defer src="main.js"></script>
-    <script defer src="add-donut-event.js"></script>
 </head>
 <body>
     <header>
@@ -31,23 +31,23 @@
                     <input id="price" name="price" type="number" />
                 </label>
                 <br />
-                <label for="is-vegan">
+                <label for="inStock">
                     In stock?
-                    <select id="is-vegan" name="is-vegan">\
-                        <option value="N/A">---Select---</option>
-                        <option value="yes">yes</option>
-                        <option value="no">no</option>
+                    <select id="inStock" name="inStock">\
+                        <option value=null>---Select---</option>
+                        <option value=true>yes</option>
+                        <option value=false>no</option>
                     </select>
                 </label>
                 <br />
                 Vegan?
-                <label>
+                <label for="isVeganYes">
                     Yes
-                    <input name="contact-info" type="radio" checked />
+                    <input id="isVeganYes" name="isVegan" type="radio" checked />
                 </label>
-                <label>
+                <label for="isVeganNo">
                     No
-                    <input name="contact-info" type="radio" />
+                    <input id="isVeganNo" name="isVegan" type="radio" />
                 </label>
                 <br />
                 <input type="submit" value="Create New Donut"/>

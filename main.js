@@ -1,11 +1,11 @@
-const addDonutForm = document.querySelector("form");
+const form = document.querySelector("form");
 
-addDonutForm.addEventListener("submit", (event) => {
+form.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const { donut, price, inStockYes, isVegan } = event.target;
+    const { donut, price, inStock, isVeganYes } = event.target;
     
-    const article = createDonut(donut.value, price.value, inStockYes.checked, isVegan.value);
-
+    generateDonut(donut.value, price.value, inStock.value, isVeganYes.checked);
     
+    form.reset();
 })
