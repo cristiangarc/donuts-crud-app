@@ -15,7 +15,7 @@ const createDonut = (name, price=0, inStock=false, isVegan=false, url="https://e
     // count--;
     // addCount(count);
   })
-  
+
   if (name) {
       article.innerHTML = `<h3>${name}</h3>
       <img style="width: 150px" src="${url}">
