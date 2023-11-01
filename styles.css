@@ -3,7 +3,7 @@
 html,
 body {
   color: black;
-  background-color: pink;
+  background-color: orchid;
   font-family: "EB Garamond", serif;
   margin: 0;
   padding: 0;
@@ -19,9 +19,24 @@ h6 {
   margin: 0;
 }
 
-main {
+header {
+    color: whitesmoke;
+    background-color: navy;
+}
+
+main section {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+section.donuts {
+    display: inline-block;
+    width: 300px;
+}
+
+section.add-form {
+    display: inline;
+    width: 300px;
 }
 
 article {
