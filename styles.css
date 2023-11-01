@@ -52,6 +52,7 @@ form label {
 }
 
 label input {
+    display: block;
     height: 20px;
     width: 200px;
 }
@@ -92,7 +93,7 @@ img {
 
 @media (max-width: 780) {
     section.donuts {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
 }
 
