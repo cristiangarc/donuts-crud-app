@@ -3,7 +3,7 @@
 html,
 body {
   color: black;
-  background-color: orchid;
+  background-color: wheat;
   font-family: "EB Garamond", serif;
   margin: 0;
   padding: 0;
@@ -22,6 +22,7 @@ h6 {
 header {
     color: whitesmoke;
     background-color: navy;
+    height: 75px;
 }
 
 main {
@@ -36,13 +37,13 @@ section.donuts {
 
 section.add-form {
     /* border: 2px solid gold; */
-    width: 300px;
-    height: 600px;
-    padding: 25px;
+    margin: 25px;
 }
 
 form {
-    margin: auto;
+    display: block;
+    padding: 25px;
+    border: 3px solid navy;
 }
 
 form label {
@@ -52,7 +53,6 @@ form label {
 }
 
 label input {
-    display: block;
     height: 20px;
     width: 200px;
 }
