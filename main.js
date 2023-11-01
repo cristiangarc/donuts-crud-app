@@ -1,17 +1,11 @@
-// create four additional article elements
-for (const donut of donuts) {
-    const article = createDonut(donut.name, donut.priceInCents, donut.inStock);
+const addDonutForm = document.querySelector("form");
 
-    const main = document.querySelector('main');
-    main.append(article)
-}
+addDonutForm.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-const createDonut = (name, price, inStock, url="") => {
-    const article = document.createElement('article');
-    article.innerHTML = `<h3>${name}</h3>
-    <img style="width: 150px" src="${url}">
-    <h4>Price: ${price}<h4/>
-    <h4>In Stock: ${inStock}<h4/>`;
+    const { donut, price, inStockYes, isVegan } = event.target;
+    
+    const article = createDonut(donut.value, price.value, inStockYes.checked, isVegan.value);
 
-    return article;
-}
+    
+})

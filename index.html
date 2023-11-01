@@ -6,20 +6,52 @@
     <title>Donuts CRUD</title>
     <link href="styles.css" rel="stylesheet" type="text/css" />
     <script defer src="main.js"></script>
+    <script defer src="add-donut-event.js"></script>
 </head>
 <body>
     <header>
         <h1>Donuts Inventory</h1>
     </header>
     <main>
-        <section>
+        <section class="donuts">
             <article>
-                <h3>Donut 1</h3>
+                <h3>chocolate sprinkles</h3>
                 <img style="width: 150px" src="https://purepng.com/public/uploads/large/purepng.com-donutfood-dessert-donut-doughnut-fat-941524635175i5xtv.png" alt="chocolate, sprinkled donut">
             </article>
         </section>
-        <section>
-            <form action="submit"></form>
+        <section class="add-form">
+            <form id="new-donut">
+                <label for="donut">
+                    Donut:
+                    <input id="donut" name="donut" type="text" />
+                </label>
+                <br />
+                <label for="price">
+                    Price in USD:
+                    <input id="price" name="price" type="number" />
+                </label>
+                <br />
+                <label for="is-vegan">
+                    In stock?
+                    <select id="is-vegan" name="is-vegan">\
+                        <option value="N/A">---Select---</option>
+                        <option value="yes">yes</option>
+                        <option value="no">no</option>
+                    </select>
+                </label>
+                <br />
+                Vegan?
+                <label>
+                    Yes
+                    <input name="contact-info" type="radio" checked />
+                </label>
+                <label>
+                    No
+                    <input name="contact-info" type="radio" />
+                </label>
+                <br />
+                <input type="submit" value="Create New Donut"/>
+            </form>
         </section>
     </main>
 </body>
