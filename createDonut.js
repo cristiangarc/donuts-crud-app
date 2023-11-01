@@ -1,48 +1,4 @@
-const donuts = [
-    {
-      "name": "chocolate",
-      "priceInCents": 100,
-      "id": "RE0n",
-      "inStock": true,
-      "isVegan": false
-    },
-    {
-      "name": "vegan pumpkin",
-      "priceInCents": 250,
-      "id": "jcfr",
-      "inStock": true,
-      "isVegan": true
-    },
-    {
-      "name": "vegan maple bacon",
-      "priceInCents": 225,
-      "id": "ll5o",
-      "inStock": false,
-      "isVegan": true
-    },
-    {
-      "name": "vanilla",
-      "priceInCents": 150,
-      "id": "THdi",
-      "inStock": true,
-      "isVegan": false
-    },
-    {
-      "name": "powdered",
-      "priceInCents": 100,
-      "id": "zDWJ",
-      "inStock": true,
-      "isVegan": false
-    },
-    {
-      "name": "blueberry",
-      "priceInCents": 100,
-      "id": "l34g",
-      "inStock": true,
-      "isVegan": false
-    }
-  ]
-
+// create an article with a donut that has specific details like name, price, in stock
 const createDonut = (name, price=0, inStock=false, isVegan=false, url="") => {
     const article = document.createElement('article');
     
@@ -65,7 +21,7 @@ const createDonut = (name, price=0, inStock=false, isVegan=false, url="") => {
         <img style="width: 150px" src="${url}">
         <h4 style="color: ${inStock ? "green" : "red"}">${inStock ? "In Stock" : "Out of Stock"}<h4/>
         <h4>Vegan: ${isVegan ? "yes" : "no"}
-        <h4>${(price/100).toFixed(2)}<h4/>`;
+        <h4>${Number(price).toFixed(2)}<h4/>`;
         
         article.append(removeButton);
     }
@@ -73,10 +29,21 @@ const createDonut = (name, price=0, inStock=false, isVegan=false, url="") => {
     return article;
 }
 
-// create additional article/(single donut) elements
-for (const donut of donuts) {
-    const article = createDonut(donut.name, donut.priceInCents, donut.inStock, donut.isVegan);
+const generateDonut = (name, price, inStock, isVegan, url) => {
 
-    const mainSection = document.querySelector('main section');
-    mainSection.append(article)
+  // create a new article
+  const article = createDonut(name, price, inStock, isVegan, url);
+
+  // grab section .donuts from DOM
+  const sectionDonuts = document.querySelector("section.donuts");
+  // append the newly created article
+  sectionDonuts.append(article);
 }
+
+// create additional article/(single donut) elements
+// for (const donut of donuts) {
+//     const article = createDonut(donut.name, donut.priceInCents, donut.inStock, donut.isVegan);
+
+//     const mainSection = document.querySelector('main section');
+//     mainSection.append(article)
+// }
