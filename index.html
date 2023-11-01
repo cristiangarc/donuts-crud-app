@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donuts CRUD</title>
     <link href="styles.css" rel="stylesheet" type="text/css" />
-    <script defer src="createDonut.js"></script>
     <script defer src="main.js"></script>
+    <script defer src="createDonut.js"></script>
 </head>
 <body>
     <header>
@@ -14,25 +14,28 @@
     </header>
     <main>
         <section class="donuts">
-            <article>
+            <article class="single-donut">
                 <h3>chocolate sprinkles</h3>
                 <img style="width: 150px" src="https://purepng.com/public/uploads/large/purepng.com-donutfood-dessert-donut-doughnut-fat-941524635175i5xtv.png" alt="chocolate, sprinkled donut">
+                <input type="submit" value="Remove Donut" />
             </article>
         </section>
         <section class="add-form">
             <form id="new-donut">
                 <label for="donut">
                     Donut:
+                    <br />
                     <input id="donut" name="donut" type="text" />
                 </label>
                 <br />
                 <label for="price">
                     Price in USD:
+                    <br />
                     <input id="price" name="price" type="number" />
                 </label>
                 <br />
                 <label for="inStock">
-                    In stock?
+                    In Stock?
                     <select id="inStock" name="inStock">\
                         <option value=null>---Select---</option>
                         <option value=true>yes</option>
@@ -41,11 +44,12 @@
                 </label>
                 <br />
                 Vegan?
-                <label for="isVeganYes">
+                <br />
+                <label class="isVeganYes" for="isVeganYes">
                     Yes
                     <input id="isVeganYes" name="isVegan" type="radio" checked />
                 </label>
-                <label for="isVeganNo">
+                <label class="isVeganNo" for="isVeganNo">
                     No
                     <input id="isVeganNo" name="isVegan" type="radio" />
                 </label>
