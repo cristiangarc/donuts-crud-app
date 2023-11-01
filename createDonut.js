@@ -93,7 +93,11 @@ for (const i of '0123') {
 
 const buttons = document.querySelectorAll("input[type='submit'");
 for (const button of buttons) {
-  button.addEventListener("click", (event) => {
-    event.target.closest(".single-donut").remove();
-  })
+  if (button.value != "Create New Donut") {
+    button.addEventListener("click", (event) => {
+      console.log(event.target);
+      // console.log(button);
+      event.target.closest(".single-donut").remove();
+    })
+  }
 }
