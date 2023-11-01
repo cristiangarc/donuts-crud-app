@@ -21,7 +21,7 @@ const createDonut = (name, price=0, inStock=false, isVegan=false, url="https://e
       <img style="width: 150px" src="${url}">
       <h4 style="color: ${inStock ? "green" : "red"}">${inStock ? "In Stock" : "Out of Stock"}<h4/>
       <h4>Vegan: ${isVegan ? "yes" : "no"}
-      <h4>${Number(price).toFixed(2)}<h4/>`;
+      <h4>$${Number(price).toFixed(2)}<h4/>`;
       
       article.append(removeButton);
   }
@@ -93,7 +93,11 @@ for (const i of '0123') {
 
 const buttons = document.querySelectorAll("input[type='submit'");
 for (const button of buttons) {
-  button.addEventListener("click", (event) => {
-    event.target.closest(".single-donut").remove();
-  })
+  if (button.value != "Create New Donut") {
+    button.addEventListener("click", (event) => {
+      console.log(event.target);
+      // console.log(button);
+      event.target.closest(".single-donut").remove();
+    })
+  }
 }
