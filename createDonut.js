@@ -1,5 +1,5 @@
 // create an article with a donut that has specific details like name, price, in stock
-const createDonut = (name, price=0, inStock=false, isVegan=false, url="") => {
+const createDonut = (name, price=0, inStock=false, isVegan=false, url="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fimg_480297.png&f=1&nofb=1&ipt=71ef17c03dd01f813313b86f2a2de6e0ee1105e019a1ca8efc8d62cafbd9663d&ipo=images") => {
     const article = document.createElement('article');
     
     article.classList.add("single-donut");
