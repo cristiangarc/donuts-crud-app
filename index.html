@@ -26,21 +26,23 @@
         </section>
         <section class="add-form">
             <form id="new-donut">
+                <h2>Add Donut</h2>
+                <br />
                 <label for="donut">
                     Donut:
                     <br />
-                    <input id="donut" name="donut" type="text" />
+                    <input id="donut" name="donut" type="text" required/>
                 </label>
                 <br />
                 <label for="price">
                     Price in USD:
                     <br />
-                    <input id="price" name="price" type="number" />
+                    <input id="price" name="price" type="number" required/>
                 </label>
                 <br />
                 <label for="inStock">
                     In Stock?
-                    <select id="inStock" name="inStock">\
+                    <select id="inStock" name="inStock" required>\
                         <option value=null>---Select---</option>
                         <option value=true>yes</option>
                         <option value=false>no</option>
