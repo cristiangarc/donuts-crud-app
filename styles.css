@@ -24,7 +24,7 @@ header {
     background-color: navy;
 }
 
-main section {
+main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
@@ -35,8 +35,9 @@ section.donuts {
 }
 
 section.add-form {
-    display: inline;
+    display: inline-block;
     width: 300px;
+    padding: 25px;
 }
 
 article {
@@ -62,7 +63,6 @@ img {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
 
 @media (max-width: 500px) {
     main {
