@@ -46,13 +46,28 @@ const donuts = [
 const createDonut = (name, price=0, inStock=false, isVegan=false, url="") => {
     const article = document.createElement('article');
     
+    article.classList.add("single-donut");
+
+    // create a button, add text to the button, and add an event listener to the button to remove the article
+    // append the button to the article
+    const removeButton = document.createElement("button");
+  
+    removeButton.textContent = "Remove Donut";
+    removeButton.addEventListener("click", (event) => {
+      // find the closest li to this button and remove it
+      event.target.closest(".single-donut").remove();
+      // count--;
+      // addCount(count);
+    })
+    
     if (name) {
         article.innerHTML = `<h3>${name}</h3>
         <img style="width: 150px" src="${url}">
         <h4>Price: ${price}<h4/>
         <h4 style="color: green">${inStock ? "In Stock" : ""}<h4/>
         <h4>Vegan: ${isVegan ? "yes" : "no"}`;
-
+        
+        article.append(removeButton);
     }
 
     return article;
