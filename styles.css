@@ -26,18 +26,50 @@ header {
 
 main {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 2fr 1fr;
 }
 
 section.donuts {
-    display: inline-block;
-    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 section.add-form {
-    display: inline-block;
+    /* border: 2px solid gold; */
     width: 300px;
+    height: 600px;
     padding: 25px;
+}
+
+form {
+    margin: auto;
+}
+
+form label {
+    /* border: 1px solid red; */
+    display: block;
+    text-align: left;
+}
+
+label input {
+    height: 20px;
+    width: 200px;
+}
+
+#inStock {
+    text-align: center;
+    height: 23px;
+    width: 100px;
+}
+
+label.isVeganYes {
+    /* border: 1px solid green; */
+    display: block;
+}
+
+label.isVeganNo {
+    /* border: 1px solid orange; */
+    display: block;
 }
 
 article {
@@ -59,13 +91,13 @@ img {
 }
 
 @media (max-width: 780) {
-    main {
+    section.donuts {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 500px) {
-    main {
+    section.donuts {
         grid-template-columns: 1fr;
     }
 }
