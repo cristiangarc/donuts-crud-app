@@ -21,6 +21,7 @@
                 <h4 style="color: green">In Stock</h4>
                 <h4>Vegan: no</h4>
                 <h4>$1.00</h4>
+                <h4>kcal: 300</h4>
                 <input type="submit" value="Remove Donut" />
             </article>
         </section>
@@ -38,6 +39,12 @@
                     Price in USD:
                     <br />
                     <input id="price" name="price" type="number" required/>
+                </label>
+                <br />
+                <label for="calories">
+                    kcal:
+                    <br />
+                    <input id="calories" name="calories" type="number" />
                 </label>
                 <br />
                 <label for="inStock">
@@ -60,6 +67,7 @@
                     <input id="isVeganNo" name="isVegan" type="radio" />
                 </label>
                 <br />
+                <input type="reset" value="Reset" />
                 <input type="submit" value="Create New Donut"/>
             </form>
         </section>

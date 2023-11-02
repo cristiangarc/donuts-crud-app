@@ -1,5 +1,5 @@
 // create an article with a donut that has specific details like name, price, in stock
-const createDonut = (name, price=0, inStock=false, isVegan=false, url="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fimg_480297.png&f=1&nofb=1&ipt=71ef17c03dd01f813313b86f2a2de6e0ee1105e019a1ca8efc8d62cafbd9663d&ipo=images") => {
+const createDonut = (name, price=0, inStock=false, isVegan=false, calories=100, url="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fimg_480297.png&f=1&nofb=1&ipt=71ef17c03dd01f813313b86f2a2de6e0ee1105e019a1ca8efc8d62cafbd9663d&ipo=images") => {
   const article = document.createElement('article');
   
   article.classList.add("single-donut");
@@ -21,7 +21,8 @@ const createDonut = (name, price=0, inStock=false, isVegan=false, url="https://e
       <img style="width: 150px" src="${url}">
       <h4 style="color: ${inStock ? "green" : "red"}">${inStock ? "In Stock" : "Out of Stock"}<h4/>
       <h4>Vegan: ${isVegan ? "yes" : "no"}
-      <h4>$${Number(price).toFixed(2)}<h4/>`;
+      <h4>$${Number(price).toFixed(2)}<h4/>
+      <h4>kcal: ${calories}</h4>`;
       
       article.append(removeButton);
   }
@@ -46,49 +47,55 @@ const donuts = [
     "priceInCents": 100,
     "id": "RE0n",
     "inStock": true,
-    "isVegan": false
+    "isVegan": false,
+    "calories": 250
   },
   {
     "name": "vegan pumpkin",
     "priceInCents": 250,
     "id": "jcfr",
     "inStock": true,
-    "isVegan": true
+    "isVegan": true,
+    "calories": 150
   },
   {
     "name": "vegan maple bacon",
     "priceInCents": 225,
     "id": "ll5o",
     "inStock": false,
-    "isVegan": true
+    "isVegan": true,
+    "calories": 300
   },
   {
     "name": "vanilla",
     "priceInCents": 150,
     "id": "THdi",
     "inStock": true,
-    "isVegan": false
+    "isVegan": false,
+    "calories": 270
   },
   {
     "name": "powdered",
     "priceInCents": 100,
     "id": "zDWJ",
     "inStock": true,
-    "isVegan": false
+    "isVegan": false,
+    "calories": 300
   },
   {
     "name": "blueberry",
     "priceInCents": 100,
     "id": "l34g",
     "inStock": true,
-    "isVegan": false
+    "isVegan": false,
+    "calories": 150
   }
 ]
 
 for (const i of '0123') {
   const donut = donuts[Number(i)];
   // generate an article
-  generateDonut(donut.name, donut.priceInCents / 100, donut.inStock, donut.isVegan);
+  generateDonut(donut.name, donut.priceInCents / 100, donut.inStock, donut.isVegan, donut.calories);
 }
 
 const buttons = document.querySelectorAll("input[type='submit'");
