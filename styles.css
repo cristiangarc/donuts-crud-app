@@ -3,7 +3,7 @@
 html,
 body {
   color: black;
-  background-color: wheat;
+  background-color: orange;
   font-family: "EB Garamond", serif;
   margin: 0;
   padding: 0;
@@ -41,9 +41,9 @@ section.add-form {
 }
 
 form {
+    border: 2px solid navy;
     display: block;
     padding: 25px;
-    border: 3px solid navy;
 }
 
 form label {
