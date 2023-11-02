@@ -20,7 +20,7 @@ const createDonut = (name, price=0, inStock=false, isVegan=false, calories=100, 
       article.innerHTML = `<h3>${name}</h3>
       <img style="width: 150px" src="${url}">
       <h4 style="color: ${inStock ? "green" : "red"}">${inStock ? "In Stock" : "Out of Stock"}<h4/>
-      <h4>Vegan: ${isVegan ? "yes" : "no"}
+      <h4>Vegan: ${isVegan ? "yes" : "no"}<h4/>
       <h4>$${Number(price).toFixed(2)}<h4/>
       <h4>kcal: ${calories}</h4>`;
       
@@ -30,12 +30,33 @@ const createDonut = (name, price=0, inStock=false, isVegan=false, calories=100, 
   return article;
 }
 
+const addInStockDynamic = (article) => {
+  let h4StockVal = article.children[2];
+  const isFirstArticle = article.classList.value.includes("first-article");
+  if (isFirstArticle) {
+    h4StockVal = article.children[3];
+  }
+  h4StockVal.addEventListener("click", (event) => {
+      const isInStock = h4StockVal.textContent == "In Stock";
+      if (!isInStock) {
+          h4StockVal.textContent = "In Stock";
+          h4StockVal.setAttribute("style", "color: green");
+      } else {
+        h4StockVal.textContent = "Out of Stock";
+        h4StockVal.setAttribute("style", "color: red");
+      }
+  })
+
+  // return h4StockVal;
+}
+
 const generateDonut = (name, price, inStock, isVegan, url) => {
 
   // create a new article
   const article = createDonut(name, price, inStock, isVegan, url);
+  addInStockDynamic(article);
 
-  // grab section .donuts from DOM
+  // grab the section .donuts from DOM
   const sectionDonuts = document.querySelector("section.donuts");
   // append the newly created article
   sectionDonuts.append(article);
@@ -92,7 +113,7 @@ const donuts = [
   }
 ]
 
-for (const i of '0123') {
+for (const i of '01234') {
   const donut = donuts[Number(i)];
   // generate an article
   generateDonut(donut.name, donut.priceInCents / 100, donut.inStock, donut.isVegan, donut.calories);
