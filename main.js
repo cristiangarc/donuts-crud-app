@@ -22,7 +22,5 @@ form.addEventListener("submit", (event) => {
 
 // reset the form when the reset button is pressed
 form.addEventListener("reset", (event) => {
-    event.preventDefault();
-
     form.reset();
 })
