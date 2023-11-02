@@ -3,7 +3,7 @@
 html,
 body {
   color: black;
-  background-color: orange;
+  background-color: #76A555;
   font-family: "EB Garamond", serif;
   margin: 0;
   padding: 0;
@@ -21,7 +21,7 @@ h6 {
 
 header {
     color: whitesmoke;
-    background-color: navy;
+    background-color: #FA2D41;
     height: 75px;
 }
 
