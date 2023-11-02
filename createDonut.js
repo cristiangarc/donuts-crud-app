@@ -40,7 +40,7 @@ const addInStockDynamic = (article) => {
       const isInStock = h4StockVal.textContent == "In Stock";
       if (!isInStock) {
           h4StockVal.textContent = "In Stock";
-          h4StockVal.setAttribute("style", "color: blue");
+          h4StockVal.setAttribute("style", "color: purple");
       } else {
         h4StockVal.textContent = "Out of Stock";
         h4StockVal.setAttribute("style", "color: rgb(255, 0, 230)");
