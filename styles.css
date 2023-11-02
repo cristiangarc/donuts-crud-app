@@ -91,14 +91,14 @@ img {
     margin: auto;
 }
 
-@media (max-width: 780) {
+@media (max-width: 780px) {
     section.donuts {
         grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 500px) {
-    section.donuts {
+    main {
         grid-template-columns: 1fr;
     }
 }
