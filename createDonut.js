@@ -19,10 +19,10 @@ const createDonut = (name, price=0, inStock=false, isVegan=false, calories=100, 
   if (name) {
       article.innerHTML = `<h3>${name}</h3>
       <img style="width: 150px" src="${url}">
-      <h4 style="color: ${inStock ? "green" : "red"}">${inStock ? "In Stock" : "Out of Stock"}<h4/>
-      <h4>Vegan: ${isVegan ? "yes" : "no"}<h4/>
+      <h4 style="color: ${inStock ? "purple" : "rgb(255, 0, 230)"}">${inStock ? "In Stock" : "Out of Stock"}<h4/>
       <h4>$${Number(price).toFixed(2)}<h4/>
-      <h4>kcal: ${calories}</h4>`;
+      <h4>kcal: ${calories}</h4>
+      <h4 style="color: ${isVegan ? "green" : ""}">${isVegan ? "Vegan" : ""}<h4/>`;
       
       article.append(removeButton);
   }
@@ -40,10 +40,10 @@ const addInStockDynamic = (article) => {
       const isInStock = h4StockVal.textContent == "In Stock";
       if (!isInStock) {
           h4StockVal.textContent = "In Stock";
-          h4StockVal.setAttribute("style", "color: green");
+          h4StockVal.setAttribute("style", "color: blue");
       } else {
         h4StockVal.textContent = "Out of Stock";
-        h4StockVal.setAttribute("style", "color: red");
+        h4StockVal.setAttribute("style", "color: rgb(255, 0, 230)");
       }
   })
 
