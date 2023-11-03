@@ -99,7 +99,7 @@ const donuts = [
     "name": "powdered",
     "priceInCents": 100,
     "id": "zDWJ",
-    "inStock": true,
+    "inStock": false,
     "isVegan": false,
     "calories": 300
   },
@@ -113,7 +113,7 @@ const donuts = [
   }
 ]
 
-for (const i of '01234') {
+for (const i of '0123') {
   const donut = donuts[Number(i)];
   // generate an article
   generateDonut(donut.name, donut.priceInCents / 100, donut.inStock, donut.isVegan, donut.calories);
